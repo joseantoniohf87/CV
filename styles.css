@@ -1,83 +1,141 @@
 :root{
-  --bg:#f6f7fb;
-  --card:#ffffff;
-  --accent:#0b5cff;
-  --text:#222;
-  --muted:#666;
-  --radius:12px;
-  --glass: rgba(255,255,255,0.7);
-  --max-width:980px;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --fondo:#f6f7fb;
+  --tarjeta:#ffffff;
+  --color:#222;
+  --secundario:#666;
+  --azul:#0b5cff;
+  --radio:12px;
+  --ancho-max:980px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:var(--text)}
-.container{max-width:var(--max-width);margin:0 auto;padding:22px}
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--color);
+}
 
+.contenedor{
+  max-width:var(--ancho-max);
+  margin:0 auto;
+  padding:20px;
+}
 
-.hero{
-  background: linear-gradient(90deg, rgba(11,92,255,0.08), rgba(11,92,255,0.02));
-  padding:28px;
-  border-radius: var(--radius);
-  margin:18px 0;
+/* CABECERA */
+
+.cabecera{
+  background: rgba(11,92,255,0.07);
+  padding:25px 0;
+}
+
+.cabecera-contenido{
   display:flex;
+  justify-content:space-between;
   align-items:center;
+  flex-wrap:wrap;
 }
-.hero .container{display:flex;gap:24px;align-items:center;justify-content:space-between;padding:0}
-.hero-left h1{margin:0;font-size:28px;letter-spacing:0.4px}
-.title{margin:6px 0 0;font-weight:600;color:var(--accent)}
-.location{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.contact-card{
-  background:var(--card);
+.cabecera-izq h1{
+  margin:0;
+  font-size:28px;
+}
+
+.puesto{
+  margin:5px 0 0;
+  color:var(--azul);
+  font-weight:bold;
+}
+
+.ciudad{
+  margin:5px 0 0;
+  color:var(--secundario);
+}
+
+.tarjeta-contacto{
+  background:var(--tarjeta);
   padding:12px 16px;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(20,30,60,0.06);
-  min-width:210px;
+  border-radius:var(--radio);
+  box-shadow:0 4px 14px rgba(0,0,0,0.1);
+  min-width:200px;
 }
-.contact-card h3{margin:0 0 8px;font-size:14px}
-.contact-card a{color:var(--accent);text-decoration:none}
 
+.tarjeta-contacto h3{
+  margin-top:0;
+}
 
-.main-grid{
+.tarjeta-contacto a{
+  color:var(--azul);
+  text-decoration:none;
+}
+
+/* CUERPO */
+
+.cuerpo{
   display:grid;
-  grid-template-columns: 1fr 320px;
-  gap:18px;
-  align-items:start;
-  margin-bottom:28px;
-}
-@media (max-width:880px){
-  .main-grid{grid-template-columns: 1fr; padding-top:8px}
+  grid-template-columns:1fr 300px;
+  gap:20px;
 }
 
+@media(max-width:900px){
+  .cuerpo{
+    grid-template-columns:1fr;
+  }
+}
 
-.card{
-  background:var(--card);
+.tarjeta{
+  background:var(--tarjeta);
   padding:18px;
-  border-radius:12px;
-  box-shadow: 0 8px 26px rgba(15,25,40,0.04);
-}
-.card h2{margin:0 0 12px;font-size:18px}
-
-
-.about p{margin:0;color:var(--muted);line-height:1.45}
-
-
-.skills ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:8px}
-.skills li{
-  background: linear-gradient(180deg,#fbfdff,#ffffff);
-  padding:8px 10px;border-radius:8px;border:1px solid #eef3ff;font-size:14px;color:var(--text)
+  border-radius:var(--radio);
+  box-shadow:0 4px 16px rgba(0,0,0,0.05);
 }
 
+.tarjeta h2{margin-top:0}
 
-.edu-item{margin-bottom:12px}
-.edu-item h3{margin:0;font-size:15px}
-.edu-item .period{display:block;color:var(--muted);font-size:13px;margin-top:4px}
-.edu-item p{margin:6px 0 0;color:var(--muted);font-size:14px}
+/* HABILIDADES */
 
+.lista-habilidades{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:8px;
+}
 
-.lang-list{list-style:none;padding:0;margin:0}
-.lang-list li{padding:8px 0;border-bottom:1px dashed #f0f0f0;color:var(--muted)}
+.lista-habilidades li{
+  background:#ffffff;
+  border:1px solid #e4e8f0;
+  padding:8px;
+  border-radius:8px;
+  font-size:14px;
+}
 
+/* EDUCACIÓN */
 
-.footer{padding:14px;text-align:center;color:var(--muted);font-size:13px}
+.item-educacion{
+  margin-bottom:12px;
+}
+
+.item-educacion h3{
+  margin:0;
+}
+
+.periodo{
+  display:block;
+  color:var(--secundario);
+  font-size:13px;
+  margin-top:4px;
+}
+
+/* IDIOMAS */
+
+.lista-idiomas{
+  list-style:none;
+  padding:0;
+}
+
+.lista-idiomas li{
+  padding:6px 0;
+  border-bottom:1px dashed #eee;
+  color:var(--secundario);
+}

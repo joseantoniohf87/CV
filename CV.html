@@ -1,21 +1,23 @@
-  <!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>José Antonio Hidalgo — CV</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <div class="hero-left">
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-contenido">
+      <div class="cabecera-izq">
         <h1>José Antonio Hidalgo</h1>
-        <p class="title">Diseñador de páginas web en desarrollo</p>
-        <p class="location">Granada, España</p>
+        <p class="puesto">Diseñador de páginas web en desarrollo</p>
+        <p class="ciudad">Granada, España</p>
       </div>
-      <div class="hero-right">
-        <div class="contact-card">
+
+      <div class="cabecera-der">
+        <div class="tarjeta-contacto">
           <h3>Contacto</h3>
           <p><strong>Tel:</strong> <a href="tel:+34621202409">621 20 24 09</a></p>
           <p><strong>Email:</strong> <a href="mailto:joseantoniohf87@gmail.com">joseantoniohf87@gmail.com</a></p>
@@ -24,50 +26,61 @@
     </div>
   </header>
 
-  <main class="container main-grid">
-    <section class="about card">
+  <main class="contenedor cuerpo">
+
+    <section class="seccion tarjeta">
       <h2>Sobre mí</h2>
-      <p>Soy una persona con ganas de trabajar, con disposición para trabajar en equipo y con mucha aspiración a conseguir más experiencia a lo largo de mi carrera. Actualmente cursando Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW) en IES Zaidín Vergeles.</p>
+      <p>
+        Soy una persona con ganas de trabajar, con disposición para trabajar
+        en equipo y con mucha aspiración a conseguir más experiencia a lo largo
+        de mi carrera. Actualmente cursando Desarrollo de Aplicaciones Web (DAW)
+        en IES Zaidín Vergeles.
+      </p>
     </section>
 
-    <section class="skills card">
+    <section class="seccion tarjeta">
       <h2>Habilidades</h2>
-      <ul>
+      <ul class="lista-habilidades">
         <li>Diseño web</li>
         <li>Adaptabilidad</li>
         <li>Programación (Java y PSeInt)</li>
-        <li>Creatividad y creación</li>
+        <li>Creatividad</li>
         <li>Rapidez y eficiencia</li>
         <li>Trabajo en equipo</li>
       </ul>
     </section>
 
-    <section class="education card">
+    <section class="seccion tarjeta">
       <h2>Educación</h2>
-      <div class="edu-item">
+
+      <div class="item-educacion">
         <h3>IES Miguel de Cervantes</h3>
-        <span class="period">2018 — 2022</span>
-        <p>Estudios de Educación Secundaria Obligatoria</p>
+        <span class="periodo">2018 - 2022</span>
+        <p>Educación Secundaria Obligatoria</p>
       </div>
-      <div class="edu-item">
+
+      <div class="item-educacion">
         <h3>IES Miguel de Cervantes</h3>
-        <span class="period">2022 — 2024</span>
+        <span class="periodo">2022 - 2024</span>
         <p>Bachillerato</p>
       </div>
-      <div class="edu-item">
+
+      <div class="item-educacion">
         <h3>IES Zaidín Vergeles</h3>
-        <span class="period">Actual</span>
-        <p>Ciclo Formativo Grado Superior — DAW</p>
+        <span class="periodo">Actual</span>
+        <p>Grado Superior — DAW</p>
       </div>
     </section>
 
-    <section class="languages card">
+    <section class="seccion tarjeta">
       <h2>Idiomas</h2>
-      <ul class="lang-list">
+      <ul class="lista-idiomas">
         <li><strong>Español:</strong> Nativo</li>
         <li><strong>Inglés:</strong> Intermedio</li>
       </ul>
     </section>
+
   </main>
+
 </body>
 </html>
